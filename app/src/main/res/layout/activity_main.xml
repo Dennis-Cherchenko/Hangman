@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.arlyn.hangman.MainActivity"
+    android:weightSum="3"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <fragment
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.arlyn.hangman.GameFragment"
+            android:id="@+id/gameFragment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.arlyn.hangman.LetterFragment"
+        android:id="@+id/letterFragment" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:visibility="invisible">
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.arlyn.hangman.HintFragment"
+        android:id="@+id/hintFragment" />
+    </LinearLayout>
+</LinearLayout>
